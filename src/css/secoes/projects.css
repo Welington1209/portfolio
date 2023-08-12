@@ -1,0 +1,94 @@
+.projects {
+    justify-content: center;
+    /* align-items: center; */
+    gap: 100px 50px;
+    padding: 100px 50px;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.projects .card {
+    position: relative;
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(45deg,rgb(7, 1, 14),#012830);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.projects .card:hover {
+    height: 350px;
+}
+
+.projects .card .box-img {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background-color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.projects .card .box-img img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.projects .card .content {
+    position: absolute;
+    top: 220px;
+    width: 100%;
+    text-align: center;
+    padding: 35px;
+    height: 35px;
+    transition: .5s;
+    overflow: hidden;
+    font-size: 1.8rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 500;
+}
+
+.projects .card:hover .box-img {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, .80);
+}
+
+.projects .card:hover .content {
+    top: 100px;
+    height: 250px;
+}
+
+.projects .card .content a {
+   display: inline-block;
+   margin-top: 15px;
+}
+
+.projects .card .content a:hover {
+    color: var(--cor-primaria);
+}
+
+@media(max-width:300px) {
+    .projects .card .box-img {
+        width: 200px;
+    height: 220px;
+    }
+
+    .projects .card .content {
+        font-size: 1.2rem;
+    }
+
+    .projects .card:hover .box-img {
+        scale: 0.55;
+    }
+}
+

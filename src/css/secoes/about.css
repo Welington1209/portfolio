@@ -1,0 +1,82 @@
+.for-me .image-for-me {
+    max-width: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.for-me .image-for-me:before,
+.for-me .image-for-me:after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    background: var(--background-gradient);
+    background-size: 300%;
+    z-index: -1;
+    border-radius: 20px;
+    animation: border 4s linear infinite;
+    border-radius: 10%;
+}
+
+.for-me .image-for-me:after {
+    filter: blur(10px);
+}
+
+@keyframes border {
+    100% {
+        background-position: 300%;
+    }
+}
+
+.for-me .image-for-me .img-box {
+    border-radius: 10%;
+    background-color: rgb(7, 1, 14);
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.for-me .information-about-me {
+    max-width: 60%;
+    padding: 0 50px;
+    align-self: center;
+}
+
+.for-me .information-about-me .buttons {
+    margin-top: 50px;
+}
+
+.for-me .information-about-me p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 1280px) {
+    .for-me .row {
+        justify-content: center;
+    }
+
+    .for-me .image-for-me {
+        max-width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .for-me .information-about-me {
+        padding: 0 var(--mobile-padding);
+        text-align: center;
+    }
+
+    .for-me .image-for-me .inner-shadow {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+@media(max-width:768px) {
+    .for-me .information-about-me {
+        max-width: 100%;
+    }
+}
