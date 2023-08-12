@@ -1,0 +1,114 @@
+.background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubbles span {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    background-size: cover;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #ffffff44,
+     0 0 50px #ffffff,
+     0 0 100px #ffffff;
+     animation: up calc(600s / var(--i)) linear infinite;
+     filter: blur(4px);
+}
+
+.bubbles span:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.bubbles .favorite:hover {
+    background-color: rgb(218, 165, 32);
+    box-shadow: 0 0 0 10px  rgb(218, 165, 32),
+     0 0 70px  rgb(218, 165, 32),
+     0 0 150px  rgb(218, 165, 32);
+     transition: .5s;
+}
+
+
+/* .bubbles .favorite {
+    position: absolute;
+    transform: translate(-50%, -50%);
+} */
+
+.bubbles span:nth-child(odd) {
+    background-color: #2dc3ff;
+    box-shadow: 0 0 0 10px #2dc3ff44,
+     0 0 50px #2dc3ff,
+     0 0 100px #2dc3ff;
+}
+
+.bubbles span:nth-child(3n) {
+    background-color: #055e3a;
+    box-shadow: 0 0 0 10px #055e3a44,
+     0 0 50px #055e3a,
+     0 0 100px #055e3a;
+}
+
+@keyframes up {
+    0% {
+        transform: translatey(-35vh) scale(1);
+    }
+
+    100% {
+        transform: translatey(575vh) scale(.6);
+
+    }
+}
+
+@media(max-width: 1280px) {
+    @keyframes up {
+        0% {
+            transform: translatey(-35vh) scale(.9);
+        }
+    
+        100% {
+            transform: translatey(850vh) scale(.6);
+    
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    @keyframes up {
+        0% {
+            transform: translatey(-35vh) scale(.9);
+        }
+    
+        100% {
+            transform: translatey(1000vh) scale(.5);
+    
+        }
+    }
+
+    .challenge p {
+        padding: var(--mobile-padding);
+    }
+
+    .bubbles span {
+        margin: 0;
+    }
+}
+
+.pointer {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    left: 50%;
+    top: 50%;
+}

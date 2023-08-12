@@ -1,0 +1,23 @@
+:root {
+    --cor-primaria: #f40928; 
+    --cor-branca: #fff;
+    --cor-fundo-escuro: rgb(7, 1, 14);  
+    --cor-hover: #012830  
+  }
+    
+  :root {
+    --fonte-primaria:  'popins', sans-serif;
+    --fonte-secundaria: 'Raleway', sans-serif;
+    --fonte-gigante: 4.5rem;
+    --fonte-extra-grande: 3rem;
+    --fonte-grande: 2.4rem;
+    --fonte-normal: 1.6rem;
+  }
+  
+  :root {
+    --mobile-padding: 30px;
+  }
+
+  :root {
+    --background-gradient:  linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+  }
